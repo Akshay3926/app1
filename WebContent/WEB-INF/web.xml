@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>PoolApp1</display-name>
+  <welcome-file-list>
+    <welcome-file>register.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>com.nt.servlet.RegistrationServlet</servlet-class>
+    <init-param>
+      <param-name>jndi</param-name>
+      <param-value>java:/OracleDS</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/poolurl</url-pattern>
+  </servlet-mapping>
+</web-app>
